@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="image/table.png" type="image/x-icon">
+    <title>AUTRES</title>
+</head>
+<body>
+    <h1>AUTRES</h1>
+    <a href="index.html" id="quittez">QUITTEZ</a>
+
+
+    <a href="#top"><img src="image/haut_de_page.png" alt="Bouton retour en haut de page " id="btn"></a>
+
+    <ul>    
+        <li class="accueil"><a class="liens" href="accueil.html">ACCUEIL</a></li>   
+        <li><a href="dvd.html" class="liens">DVDs</a></li>
+        <li><a href="cd.html" class="liens">CDs</a></li>
+        <li><a href="livre.html" class="liens">LIVRES/BDs</a></li>
+    </ul>
+
+    <div id="cells">
+        <div>
+            <label for="ownerSelect">Propriétaire : </label>
+            <select name="owner" class="cases" id="owner">
+                <option value="DAV">DAV</option>
+                <option value="LILI">LILI</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="name">Titre : </label>
+            <input type="text" name="text" class="cases" id="name" size="10">  
+        </div>
+
+        <div>
+            <label for="borrowerName">Prêté à : </label>
+            <input type="text" name="text" class="cases" id="borrowerName" size="10">   
+        </div>
+
+        <div>
+            <label for="borrowDate">Date d'emprunt : </label>
+            <input type="date" name="" class="cases" id="borrowDate" value="17/04/2023">
+        </div>
+
+        <div>
+            <label for="returnDate">Date de retour : </label>
+            <input type="date" name="" class="cases" id="returnDate" value="17/04/2023">
+        </div>
+        
+        <div>
+            <button id="ok">OK</button>
+        </div>
+    </div>
+
+    </div>
+
+    <div id="tableau">
+        <table id="tableau1">
+            <tr>
+                <th>PROPRIÉTAIRE</th>
+                <th>TITRE</th>
+                <th>PRÊTÉ À : </th>
+                <th>EMPRUNTÉ LE : </th>
+                <th>RENDU LE : </th>            
+            </tr>
+            <tr id="casesT1">
+                
+            </tr>
+        </table>
+
+        <div id="setDiv"></div>
+
+        <table id="tableau2">        
+            <tr>
+                <th id="rendu">Rendu</th>
+            </tr>
+            <tr id="casesT2">
+                          
+            </tr>
+        </table>
+    </div>  
+    
+   <script src="js/script.js"></script>
+</html>

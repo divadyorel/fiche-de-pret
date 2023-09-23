@@ -1,0 +1,53 @@
+@font-face
+{
+	font-family: 'ubuntu medium';
+	src: url('Ubuntu-M.ttf');
+}
+
+body
+{   
+    font-family: 'ubuntu medium';
+    background: linear-gradient(rgba(189, 148, 37, 0.664), rgba(221, 129, 76, 0.692));
+    margin: 30px;
+}
+
+h1
+{
+    text-align: center;
+    color: #520a0a;
+    font-size: 5em;
+    border: 4px solid  #0c0058;
+    border-radius: 70px;
+    box-shadow: 3px 3px 8px black;
+    background-color: #5f6c8aa8;
+    padding: 5px 15px;
+    margin: 150px 300px 150px 300px;
+}
+
+#user
+{
+    margin-bottom: 380px;
+    text-align: center;
+}
+
+#input
+{
+    height: 150px; 
+    width: 700px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #754836b6;
+    border: 4px solid #005220;
+    border-radius: 5px; 
+}
+
+#input:focus
+{
+    outline: none;
+}
+
+#input:focus::placeholder
+{
+    color: transparent;
+}

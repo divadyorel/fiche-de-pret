@@ -1,0 +1,333 @@
+
+@font-face
+{
+	font-family: "ubuntu medium";
+	src: url("Ubuntu-M.ttf");
+}
+
+body
+{   
+    font-family: "ubuntu medium", sans-serif;
+    background: linear-gradient(rgba(189, 148, 37, 0.664), rgba(221, 129, 76, 0.692));
+    margin: 30px;
+}
+
+h1
+{
+    text-align: center;
+    color: #520a0a;
+    font-size: 5em;
+    border: 4px solid  #0c0058;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px black;
+    background-color: #4f5c79a8;
+    padding: 5px 15px;
+    margin: 50px 300px 130px 300px;
+}
+
+#quittez
+{
+    text-decoration: none;
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    color: black;
+    background-color: #860707ce;
+    border: 2px solid  #0c0058;
+    border-radius: 7px;
+    box-shadow: inset 2px 2px 3px #c70b0bce, inset -2px -2px 3px #000000d9;
+    padding: 2px 10px 5px 10px;
+}
+
+#quittez:active
+{
+    box-shadow: inset -3px -3px 10px #c70b0bce, inset 2px 2px 3px #000000d9;
+}
+
+#btn
+{
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
+} 
+
+ul
+{
+    display:flex;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-left: 0;
+}
+
+li
+{
+    list-style: none;
+    font-size: 3.2em;
+    border: 3px solid  #0c0058;
+    border-radius: 15px;
+    background-color: #015744ce;
+    padding: 5px 20px;
+    margin-bottom: 80px;
+    box-shadow: inset 2px 2px 4px #009474, inset -2px -2px 3px #000000d9;
+}
+
+li:active, #ok:active 
+{
+    box-shadow: inset -3px -3px 10px #a0624ab6, inset 2px 2px 3px #000000d9;
+}
+
+.liens
+{
+    font-weight: bold;
+    color: #520a0a;
+    text-decoration: none;
+} 
+
+.sous-liens
+{
+    justify-content: space-between;
+    list-style: none;
+    font-size: 1.2em;
+    border: 2px solid  #0c0058;
+    border-radius: 8px;
+    background-color: #ad8118;
+    padding: 2px 20px 5px 20px;
+    margin-bottom: 0;
+    box-shadow: inset 2px 2px 4px #d39d1f, inset -2px -2px 2px #000000d9;
+}
+
+#sous-liens
+{
+    border: 2px solid #0c0058;
+    border-radius: 10px;
+    padding: 6px 0px;
+    background-color: #754836b6;
+    margin: 0 80px 52px 80px;
+}
+
+.accueil
+{
+    font-weight: bold;
+    background-color:#ad8118;
+    text-decoration: none;
+    box-shadow: inset 2px 2px 4px #d39d1f, inset -2px -2px 2px #000000d9;
+}
+
+#cells
+{ 
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid #0c0058;
+    border-radius: 10px;
+    padding: 9px 0 10px 0;
+    background-color: #754836b6;
+    margin: 0 80px 52px 80px;
+    
+}
+
+input, select, option
+{
+    border: 2px solid #0c0058;
+    border-radius: 5px; 
+    font-weight: bold; 
+    background-color: #ad8018e0;  
+    padding: 3px 5px;      
+}
+
+input:focus, select:focus, option:focus
+{
+    box-shadow: inset -2px -2px 6px #af8421, inset 2px 2px 1px #000000d9;
+}
+
+input:focus
+{
+    outline: none;
+}
+
+#ok
+{
+    font-weight: bold;
+    margin-top: 3px;
+    background-color: #028d02;
+    border: 2px solid #0c0058;
+    border-radius: 5px;
+    cursor: pointer; 
+    box-shadow: inset 2px 2px 4px #01ad01, inset -2px -2px 3px #000000d9;
+}
+
+#ok:focus
+{
+    outline: none;
+}
+
+#ok:active
+{
+    box-shadow: inset -3px -3px 3px #02aa02, inset 2px 2px 3px #000000d9;
+}
+
+#setDiv {
+    margin-top: 27px ;
+    display: block;
+}
+
+.set-container {   
+    margin: 10px 25px 0 25px;      
+}
+
+label
+{
+    font-size: 1.2em;
+}
+
+#tableau
+{   
+    text-transform: uppercase; 
+    background-color: #754836b6;
+    display: flex; 
+    align-items: center;   
+    margin: 0 80px 300px 80px;
+    border: 2px solid #0c0058;
+    border-radius: 10px;
+    padding: 20px 50px 100px 50px;
+}
+
+#tableau1
+{
+    border-collapse: collapse; 
+    margin: auto;   
+}    
+
+#tableau2
+{
+    border-collapse: collapse;
+    margin: auto;   
+    width: 50px;
+    text-align: center;
+}
+
+td
+{   
+    background-color:#c5a180e8;
+    border: 1px solid black;
+    width: 240px;
+    height: 30px; 
+    padding : 0 5px;      
+}
+
+th
+{
+    width: 250px;
+    height: 30px; 
+    padding-bottom: 5px;
+}
+
+
+@media screen and (max-width : 1000px) {
+    h1
+    {
+        font-size: 2.5rem;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+    }
+
+    li 
+    {
+        font-size: 1em;
+        margin-bottom: 40px;
+    }
+
+    .sous-liens 
+    {
+        font-size: 1em;
+        margin-bottom: -6px;
+    }
+
+    label, input, select, option
+    {
+        font-size: 0.5rem;
+        width: 55px;   
+    }
+
+    .cases
+    {
+        padding: 0 0;
+        font-size: 0.4rem;
+        
+    }
+
+    #cells
+   {
+       padding: 0 0 3px 0;
+        
+   }
+
+   #name, #borrowerName
+   {
+        padding-bottom: 2px;
+        padding-left: 2px;
+        padding-right: 2px;
+   }
+
+   th, td
+   {
+        font-size: 0.4rem;
+   }
+
+   td
+   {
+        height: 10px;
+        width: 100px;
+   }
+   
+   #checkBox
+   {
+    font-size: 0.4rem;
+    height: 10px;
+    width: 15px;
+   }
+}
+
+@media screen and (max-width : 390px) {
+    *
+    {
+        font-size: 0.8rem;
+    }
+
+    h1
+    {
+        font-size: 2rem;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 50px;
+    }
+
+    li, .sous-liens
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    
+    #tableau
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #cells
+    {
+        margin: 0;
+    }
+
+    label, input, select, option
+    {
+        width: 20px;
+    }
+}
+
+
