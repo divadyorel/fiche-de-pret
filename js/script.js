@@ -10,12 +10,13 @@ lis.forEach(li => {
 
 //déclaration des boutons 
 const btnOk = document.getElementById('ok');
-const btnSet = document.getElementById('set');
 const setButton = document.createElement('button');
 setButton.textContent = 'Set';
 
 //déclaration des input 
 const newRowTableau1 = document.createElement('tr');
+const newRowTableau2 = document.createElement('tr');
+const renduCellTableau2 = document.createElement('td');
 const ownerSelectInput = document.getElementById('owner');
 const nameInput = document.getElementById('name');
 const borrowerNameInput = document.getElementById('borrowerName');
@@ -97,7 +98,7 @@ btnOk.addEventListener('click', function() {
   setButton.textContent = 'SET';
 
   //Attribuer un ID au bouton set
-  setButton.setAttribute('class','Set')
+  setButton.setAttribute('id','Set')
   
   // Définir les mêmes styles que le bouton "OK" 
   setButton.style.fontWeight = 'bold';
@@ -114,7 +115,7 @@ btnOk.addEventListener('click', function() {
   setDiv.appendChild(setContainer);
 
   // Créer un effet bouton enfoncé
-  const setButtons = document.querySelectorAll('.Set');
+  const setButtons = document.querySelectorAll('#Set');
   setButtons.forEach(function(setButton) {
     setButton.addEventListener('mousedown', function() {
       setButton.style.boxShadow = 'inset -3px -3px 3px #02aa02, inset 2px 2px 3px #000000d9';
@@ -124,4 +125,16 @@ btnOk.addEventListener('click', function() {
     setButton.style.boxShadow = 'inset 2px 2px 4px #01ad01, inset -2px -2px 3px #000000d9';
     });
   });
+  
+  setButton.addEventListener('click', function() {
+    ownerCellTableau1.textContent = '';
+    nameCellTableau1.textContent = '';
+    borrowerCellTableau1.textContent = '';
+    borrowDateCellTableau1.textContent = '';
+    returnDateCellTableau1.textContent = '';
+    renduCellTableau2.textContent = '';
+    renduCellTableau2.style.backgroundColor = '#c5a180e8'
+  });
 });
+
+
