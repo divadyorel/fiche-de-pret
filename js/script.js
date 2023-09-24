@@ -3,10 +3,10 @@
 const lis = document.querySelectorAll('li')
 lis.forEach(li => {
   li.addEventListener('mousedown', () => {
-    li.style.backgroundColor = '#754836b6';
+    li.style.backgroundColor = '#4f5c79a8';
+    li.style.boxShadow = 'inset -2px -2px 4px #aaaaaa, inset 2px 2px 3px #000000d9';
   })
 })
-
 
 //déclaration des boutons 
 const btnOk = document.getElementById('ok');
@@ -22,12 +22,16 @@ const nameInput = document.getElementById('name');
 const borrowerNameInput = document.getElementById('borrowerName');
 const borrowDateInput = document.getElementById('borrowDate');
 const returnDateCell = document.getElementById('returnDate');
+const ligneNumerosList = document.getElementById('ligne-numeros');
+let ligneId = 1
 
 //------------------Actions quand le bouton OK est cliqué------------------------------
 
 btnOk.addEventListener('click', function() {
+  
   // Créer une nouvelle ligne pour tableau1
   const newRowTableau1 = document.createElement('tr');
+  newRowTableau1.id = `ligneTableau1_${ligneId}`;
 
   // Créer les cellules pour tableau1 et définir les valeurs
   const ownerCellTableau1 = document.createElement('td');
@@ -54,10 +58,20 @@ btnOk.addEventListener('click', function() {
  
   // Insérer la nouvelle ligne dans tableau1 au-dessus de la première ligne existante
   const firstRowTableau1 = document.getElementById('tableau1').rows[1];
-  firstRowTableau1.parentNode.insertBefore(newRowTableau1, firstRowTableau1); 
- 
+  firstRowTableau1.parentNode.insertBefore(newRowTableau1, firstRowTableau1);
+  
+  // Ajouter le numéro de ligne à la liste <ul>
+  const ligneNumeroItem = document.createElement('li');
+  ligneNumeroItem.setAttribute('id','li-numero')
+  ligneNumeroItem.textContent = ligneId;
+  ligneNumerosList.appendChild(ligneNumeroItem);
+
+  // Incrémenter le numéro de ligne
+  ligneId++;
+
   // Créer une nouvelle ligne pour tableau2
   const newRowTableau2 = document.createElement('tr');
+  newRowTableau2.id = `ligneTableau2_${ligneId}`;
 
   // Créer la cellule pour tableau2 et définir la valeur
   const renduCellTableau2 = document.createElement('td');
@@ -126,7 +140,23 @@ btnOk.addEventListener('click', function() {
     });
   });
   
+  //Vide les valeurs des cellules des tableaux 1 & 2 et les renvoient dans leurs inputs respectives
   setButton.addEventListener('click', function() {
+    // Extraire les valeurs des cellules de tableau1
+    const ownerValue = ownerCellTableau1.textContent;
+    const nameValue = nameCellTableau1.textContent;
+    const borrowerValue = borrowerCellTableau1.textContent;
+    const borrowDateValue = borrowDateCellTableau1.textContent;
+    const returnDateValue = returnDateCellTableau1.textContent;
+
+    // Attribuer les valeurs extraites aux champs de saisie correspondants
+    ownerSelectInput.value = ownerValue;
+    nameInput.value = nameValue;
+    borrowerNameInput.value = borrowerValue;
+    borrowDateInput.value = borrowDateValue;
+    returnDateCell.value = returnDateValue;
+
+    // Vider les cellules de tableau1 et la cellule de tableau2
     ownerCellTableau1.textContent = '';
     nameCellTableau1.textContent = '';
     borrowerCellTableau1.textContent = '';
@@ -134,6 +164,12 @@ btnOk.addEventListener('click', function() {
     returnDateCellTableau1.textContent = '';
     renduCellTableau2.textContent = '';
     renduCellTableau2.style.backgroundColor = '#c5a180e8'
+
+    ownerValue = ownerCellTableau1.textContent;
+    nameValue = nameCellTableau1.textContent;
+    borrowerValue = borrowerCellTableau1;
+    borrowDateValue = borrowDateCellTableau1;
+    returnDateValue = returnDateCellTableau1;
   });
 });
 
